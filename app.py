@@ -7,6 +7,12 @@ import bcrypt
 import time
 from datetime import datetime, timedelta
 
+# 첫 관리자 생성 (한 번만 실행)
+if not os.path.exists(USERS_FILE):
+    os.makedirs(USERS_DIR, exist_ok=True)
+    users_manager.add_user("admin", "admin123", "관리자", "관리자")
+    print("✅ 첫 관리자 계정 생성됨")
+
 # ============ 해시 기반 보안 함수 ============
 
 def hash_password(password):
