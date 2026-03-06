@@ -7,6 +7,9 @@ import bcrypt
 import time
 from datetime import datetime, timedelta
 
+USERS_DIR = "users"
+USERS_FILE = os.path.join(USERS_DIR, "allowed_users.json")
+
 # 첫 관리자 생성 (한 번만 실행)
 if not os.path.exists(USERS_FILE):
     os.makedirs(USERS_DIR, exist_ok=True)
