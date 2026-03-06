@@ -1,9 +1,0 @@
-[theme]
-base="dark"
-primaryColor="#ff4b4b"
-
-[browser]
-gatherUsageStats = false
-
-[server]
-port = 8501
